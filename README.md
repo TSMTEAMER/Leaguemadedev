@@ -1,3 +1,3 @@
 <p align="center">
-##LeagueMadeDev (League Addon)
+#LeagueMadeDev (League Addon)
 </p>
