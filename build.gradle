@@ -1,5 +1,5 @@
 plugins {
-    id "fabric-loom" version "1.4-SNAPSHOT"
+    id 'fabric-loom' version '1.1-SNAPSHOT'
 }
 
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
@@ -8,14 +8,21 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+loom {
+    accessWidenerPath = file("src/main/resources/blackout.accesswidener")
+}
+
 repositories {
     maven {
-        name = "Meteor Dev Releases"
+        name = "meteor-maven"
         url = "https://maven.meteordev.org/releases"
     }
     maven {
-        name = "Meteor Dev Snapshots"
+        name = "meteor-maven-snapshots"
         url = "https://maven.meteordev.org/snapshots"
+    }
+    maven {
+        url 'https://jitpack.io'
     }
 }
 
@@ -27,9 +34,21 @@ dependencies {
 
     // Meteor
     modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
+
+    modImplementation "baritone:fabric:${project.minecraft_version}-SNAPSHOT"
+
+    modImplementation 'org.luaj:luaj-jse:3.0.1'
+
+    implementation 'org.luaj:luaj-jse:3.0.1'
+    include 'org.luaj:luaj-jse:3.0.1'
+
+    implementation 'com.github.LabyStudio:java-spotify-api:1.2.0'
+    include 'com.github.LabyStudio:java-spotify-api:1.2.0'
 }
 
 processResources {
+    inputs.property "version", project.version
+
     filesMatching("fabric.mod.json") {
         expand "version": project.version, "mc_version": project.minecraft_version
     }

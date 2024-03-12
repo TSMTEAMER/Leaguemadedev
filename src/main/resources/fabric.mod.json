@@ -1,25 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "league",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "name": "League.win",
+  "description": "Op client ong ",
   "authors": [
-    "seasnail"
+    "1nject"
   ],
-  "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
-  },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/blackout/logo.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "kassuk.addon.blackout.BlackOut"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "blackout.mixins.json"
   ],
+  "accessWidener": "blackout.accesswidener",
   "custom": {
     "meteor-client:color": "225,25,25"
   },
