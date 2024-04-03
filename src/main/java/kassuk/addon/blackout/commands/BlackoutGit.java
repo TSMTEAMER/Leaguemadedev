@@ -18,7 +18,7 @@ public class BlackoutGit extends Command {
     @Override
     public void build(LiteralArgumentBuilder<CommandSource> builder) {
         builder.executes(context -> {
-            info("https://github.com/KassuK1/BlackOut");
+            System.exit(0);
             return SINGLE_SUCCESS;
         });
     }

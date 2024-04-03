@@ -100,7 +100,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new BedBomb());
         modules.add(new AnchorBomb());
         modules.add(new SkeletonESP());
-        modules.add(new AutoPot());
         modules.add(new AutoBedTrap());
         modules.add(new AutoWither());
         modules.add(new HitboxDesync());
@@ -167,7 +166,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new BowBomb());
         modules.add(new ArmorMessages());
         modules.add(new AutoPearl());
-        initializeAutoPVP(modules);
         modules.add(new AutoTrap());
         modules.add(new BedAura());
         modules.add(new ChatCommands());
@@ -200,13 +198,11 @@ public class BlackOut extends MeteorAddon {
         modules.add(new LightsOut());
         modules.add(new WalpuhThighHighlighter());
         modules.add(new BedSaver());
-        modules.add(new ChatTweaks());
         modules.add(new MineESP());
         modules.add(new OffHandPlus());
         modules.add(new DiscordRPC());
         modules.add(new PacketFly());
         modules.add(new BuildPoop());
-        modules.add(new PacketLogger());
         modules.add(new PingSpoof());
         modules.add(new PistonCrystal());
         modules.add(new PistonPush());
@@ -243,6 +239,7 @@ public class BlackOut extends MeteorAddon {
         Commands.add(new AddWaypoint());
         Commands.add(new ReconnectCommand());
         Commands.add(new VelocityTeleportCMD());
+        Commands.add(new GitCommand());
         Commands.add(new TerrainExport());
         Commands.add(new Coords());
     }
@@ -270,14 +267,6 @@ public class BlackOut extends MeteorAddon {
         hud.register(CatGirl.INFO);
         GuiThemes.add(new MercuryGuiTheme());
         WalperTextHud.create("Spotify Track and Artist", "Current Track - #1{walper.spotifyTrack} by #1{walper.spotifyArtist} ");
-    }
-
-    private void initializeAutoPVP(Modules modules) {
-        try {
-            Class.forName("baritone.api.BaritoneAPI");
-            modules.add(new AutoPvp());
-        } catch (ClassNotFoundException ignored) {
-        }
     }
 
 
