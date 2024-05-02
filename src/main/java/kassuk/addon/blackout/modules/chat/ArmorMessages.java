@@ -167,7 +167,7 @@ public class ArmorMessages extends Module {
             info(" Your " + armor + grammar);
         }
         else {
-            messages.add("/msg " + player.getEntityName() + " Your " + armor + grammar);
+            messages.add("/msg " + player.getName() + " Your " + armor + grammar);
         }
     }
 }

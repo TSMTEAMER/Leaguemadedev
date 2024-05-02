@@ -280,7 +280,6 @@ public class AutoFarm extends Module {
 
     private boolean harvestFilter(Block block) {
         return block instanceof CropBlock ||
-                block instanceof GourdBlock ||
                 block instanceof NetherWartBlock ||
                 block instanceof SweetBerryBushBlock;
     }

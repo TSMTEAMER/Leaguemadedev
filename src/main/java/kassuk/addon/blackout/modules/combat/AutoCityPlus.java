@@ -125,7 +125,7 @@ public class AutoCityPlus extends Module {
         if (!isMining) {
             isMining = true;
             if (!didFirstMine) didFirstMine = true;
-            info("Citying " + target.getEntityName() + ".");
+            info("Citying " + target.getName() + ".");
             if (rotate.get()) {
                 Rotations.rotate(Rotations.getYaw(cityBlock), Rotations.getPitch(cityBlock), () -> mine(cityBlock));
             } else {
@@ -206,11 +206,6 @@ public class AutoCityPlus extends Module {
     @EventHandler
     private void onRender(Render3DEvent event) {
         if (render.get() && cityBlock != null) { event.renderer.box(cityBlock, sideColor.get(), lineColor.get(), shapeMode.get(), 0); }
-    }
 
-    @Override
-    public String getInfoString() {
-        if (target != null) return target.getEntityName();
-        return null;
     }
 }

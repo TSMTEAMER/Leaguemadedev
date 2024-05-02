@@ -83,7 +83,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new MinecartAura());
         modules.add(new BurrowEsp());
         modules.add(new GradientOverlay());
-        modules.add(new PopCounter());
         modules.add(new AutoSand());
         modules.add(new AutoChunkBan());
         modules.add(new AntiPlacement());
@@ -91,8 +90,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new BlockClap());
         modules.add(new BurrowAlert());
         modules.add(new SoundLocator());
-        modules.add(new BedCrafter());
-        modules.add(new VillagerRoller());
         modules.add(new FlightAntikick());
         modules.add(new AnchorAura());
         modules.add(new DubCounter());
@@ -137,7 +134,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new DiscordNotifier());
         modules.add(new Auto32K());
         modules.add(new OpenAnarchyAutoDupe());
-        modules.add(new AutoMineplus());
         modules.add(new ItemFrameDupe());
         modules.add(new XsDupe());
         modules.add(new ArmorNotify());
@@ -146,14 +142,12 @@ public class BlackOut extends MeteorAddon {
         modules.add(new AutoGriffer());
         modules.add(new AntiAim());
         modules.add(new AntiCrawl());
-        modules.add(new PacketMine());
         modules.add(new Scan());
         modules.add(new AutoCraftingTable());
         modules.add(new AutoCrystal());
         modules.add(new AutoEz());
         modules.add(new KillEffects());
         modules.add(new Twerk());
-        modules.add(new AutoSex());
         modules.add(new Automation());
         modules.add(new Surround());
         modules.add(new CityBreaker());
@@ -178,7 +172,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new AntiBot());
         modules.add(new MultiTasks());
         modules.add(new TriggerBot());
-        modules.add(new AutoCraftPlus());
         modules.add(new AutoFarm());
         modules.add(new LecternCrash());
         modules.add(new CustomFOV());
@@ -219,7 +212,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new SurroundPlus());
         modules.add(new SwingModifier());
         modules.add(new TickShift());
-        modules.add(new WeakAlert());
     }
 
     private void initializeSettings(Modules modules) {

@@ -380,7 +380,6 @@ public class TargetHud extends HudElement {
 
         if (target != null) {
             renderName = target.getName().getString();
-            renderSkin = target.getSkinTexture();
             renderHealth = target.getHealth() + target.getAbsorptionAmount();
 
             PlayerListEntry playerListEntry = mc.getNetworkHandler().getPlayerListEntry(target.getUuid());

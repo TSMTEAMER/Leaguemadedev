@@ -22,8 +22,8 @@ import java.io.IOException;
 
 public class DiscordNotifier extends Module {
 
-    private final String name = "Ricin.cc bot";
-    private final String avatar = "https://cdn.discordapp.com/attachments/1057679007623159921/1169659599859757066/ricinbot.png?ex=65563563&is=6543c063&hm=c1399de2e8cf489cb85bd036868d04855f502e823249b5299f7c8689efe8ed65&";
+    private final String name = "League bot";
+    private final String avatar = "";
 
     private DiscordWebhook hook;
 
@@ -103,14 +103,14 @@ public class DiscordNotifier extends Module {
         if (hook == null) return;
 
         if (stashNotifier.get()) {
-            BlockPos pos = event.chunk.getPos().getStartPos();
+            BlockPos pos = event.chunk().getPos().getStartPos();
             String posStr = "X: " + pos.getX() + " Z: " + pos.getZ();
-            int chestCount = ChunkUtils.getChestCount(event.chunk);
-            int shulkerCount = ChunkUtils.getShulkerCount(event.chunk);
+            int chestCount = ChunkUtils.getChestCount(event.chunk());
+            int shulkerCount = ChunkUtils.getShulkerCount(event.chunk());
             if (chestCount > chestLimit.get() || shulkerCount > shulkerLimit.get()) {
                 readyHook(hook);
                 hook.addEmbed(new DiscordWebhook.EmbedObject()
-                    .setTitle("Unusual chest or shulker amount!" + " (" + mc.player.getEntityName() + ")")
+                    .setTitle("Unusual chest or shulker amount!" + " (" + mc.player.getName() + ")")
                     .setColor(Color.YELLOW)
                     .addField("Coordinates:", posStr, false)
                     .addField("Chest Amount:", String.valueOf(chestCount), false)
@@ -133,7 +133,7 @@ public class DiscordNotifier extends Module {
             String posStr = "X: " + pos.getX() + " Y: " + pos.getY() + " Z: " + pos.getZ();
             readyHook(hook);
             hook.addEmbed(new DiscordWebhook.EmbedObject()
-                .setTitle("You have died!" + " (" + mc.player.getEntityName() + ")")
+                .setTitle("You have died!" + " (" + mc.player.getName() + ")")
                 .setColor(Color.YELLOW)
                 .addField("Coordinates:", posStr,false)
                 .addField("Dimension:", PlayerUtils.getDimension().toString(), false)

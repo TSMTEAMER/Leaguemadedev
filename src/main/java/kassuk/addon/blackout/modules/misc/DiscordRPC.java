@@ -20,13 +20,13 @@ import meteordevelopment.starscript.compiler.Compiler;
 import meteordevelopment.starscript.compiler.Parser;
 import meteordevelopment.starscript.utils.StarscriptError;
 import net.minecraft.client.gui.screen.*;
+import net.minecraft.client.gui.screen.multiplayer.AddServerScreen;
+import net.minecraft.client.gui.screen.multiplayer.ConnectScreen;
+import net.minecraft.client.gui.screen.multiplayer.DirectConnectScreen;
 import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;
 import net.minecraft.client.gui.screen.option.*;
 import net.minecraft.client.gui.screen.pack.PackScreen;
-import net.minecraft.client.gui.screen.world.CreateWorldScreen;
-import net.minecraft.client.gui.screen.world.EditGameRulesScreen;
-import net.minecraft.client.gui.screen.world.EditWorldScreen;
-import net.minecraft.client.gui.screen.world.SelectWorldScreen;
+import net.minecraft.client.gui.screen.world.*;
 import net.minecraft.client.realms.gui.screen.RealmsScreen;
 import net.minecraft.util.Util;
 
@@ -71,7 +71,7 @@ public class DiscordRPC extends Module {
         String id = "League", image = "League", name = "League";
         switch (type.get()) {
             case League -> {
-                id = "1205886386104963143";
+                id = "1235739672005574696";
                 image = "1";
                 name = " ";
             }
