@@ -1,7 +1,7 @@
 <p align="center">
 LeagueMadeDev (League Addon)
 
-Meteor Addon with 100+ modules for 1,20.4 6 month project
+Meteor Addon with 100+ modules for 1.20.4 6 month project
 
 Made By Inject/1nject
 </p>
