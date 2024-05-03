@@ -221,10 +221,6 @@ public class BEntityUtils {
     }
 
 
-    public static boolean isWebbed(PlayerEntity targetEntity) {
-        return BWorldUtils.doesBoxTouchBlock(targetEntity.getBoundingBox(), Blocks.COBWEB);
-    }
-
     public static boolean isInHole(PlayerEntity targetEntity, boolean doubles, BlastResistantType type) {
         if (!Utils.canUpdate()) return false;
 

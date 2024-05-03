@@ -1,6 +1,5 @@
 package kassuk.addon.blackout.utils.bed.advance;
 
-import kassuk.addon.blackout.modules.render.KillEffects;
 import kassuk.addon.blackout.modules.chat.AutoEz;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;

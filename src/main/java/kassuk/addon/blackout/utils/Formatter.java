@@ -1,7 +1,6 @@
 package kassuk.addon.blackout.utils;
 
 import meteordevelopment.meteorclient.utils.Utils;
-import kassuk.addon.blackout.utils.random.Stats;
 import meteordevelopment.meteorclient.utils.player.PlayerUtils;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import meteordevelopment.meteorclient.utils.render.color.SettingColor;
@@ -53,12 +52,6 @@ public class Formatter {
     public static final List<String> disc = List.of("{discord}", "{invite}");*/
 
     public static String applyPlaceholders(String m) {
-        // stats
-        if (m.contains("{highscore}")) m = m.replace("{highscore}", String.valueOf(Stats.highscore));
-        if (m.contains("{killstreak}")) m = m.replace("{killstreak}", String.valueOf(Stats.killStreak));
-        if (m.contains("{kills}")) m = m.replace("{kills}", String.valueOf(Stats.kills));
-        if (m.contains("{deaths}")) m = m.replace("{deaths}", String.valueOf(Stats.deaths));
-
         // minecraft
         if (m.contains("{server}")) m = m.replace("{server}", Utils.getWorldName());
         if (m.contains("{version}")) m = m.replace("{version}", SharedConstants.getGameVersion().getName());
@@ -116,9 +109,6 @@ public class Formatter {
 
 
 
-    public static String getKillstreak() {
-        return " | Killstreak: " + Stats.killStreak;
-    }
     public static String getSuffix() {
         return " | Ｒｅａｐｅｒ | ＢｅｄＧｏｄ";
     }
