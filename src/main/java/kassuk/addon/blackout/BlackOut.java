@@ -146,7 +146,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new AutoCraftingTable());
         modules.add(new AutoCrystal());
         modules.add(new AutoEz());
-        modules.add(new KillEffects());
         modules.add(new Twerk());
         modules.add(new Automation());
         modules.add(new Surround());
