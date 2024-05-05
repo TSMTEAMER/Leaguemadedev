@@ -151,6 +151,7 @@ public class BlackOut extends MeteorAddon {
         modules.add(new Surround());
         modules.add(new CityBreaker());
         modules.add(new AutoTraprewrite());
+        modules.add(new PacketLogger());
         modules.add(new Holefillrewrite());
         modules.add(new AutoMend());
         modules.add(new AutoMine());

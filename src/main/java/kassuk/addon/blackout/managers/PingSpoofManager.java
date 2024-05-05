@@ -7,6 +7,7 @@ import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.orbit.EventHandler;
 import meteordevelopment.orbit.EventPriority;
 import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.c2s.common.CommonPongC2SPacket;
 import net.minecraft.network.packet.c2s.common.KeepAliveC2SPacket;
 
 import java.util.ArrayList;
@@ -56,11 +57,9 @@ public class PingSpoofManager {
         delayed1 = new DelayedPacket(new KeepAliveC2SPacket(id), System.currentTimeMillis() + Modules.get().get(PingSpoof.class).ping.get());
     }
 
-    ///this needsa fix lmao
-
-    ///public void addPong(int id) {
-       //// delayed2 = new DelayedPacket(new PlayPongC2SPacket(id), System.currentTimeMillis() + Modules.get().get(PingSpoof.class).ping.get());
-    ///}
+    public void addPong(int id) {
+        delayed2 = new DelayedPacket(new CommonPongC2SPacket(id), System.currentTimeMillis() + Modules.get().get(PingSpoof.class).ping.get());
+    }
 
     private record DelayedPacket(Packet<?> packet, long time) {}
 }

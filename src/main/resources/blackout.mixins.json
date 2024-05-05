@@ -3,22 +3,20 @@
   "package": "kassuk.addon.blackout.mixins",
   "compatibilityLevel": "JAVA_17",
   "client": [
-    "IBlockSettings",
     "AccessorMinecraftClient",
+    "IBlockSettings",
     "IEntityS2CPacket",
     "IEntitySetHeadYawS2CPacket",
     "IEntityStatusS2CPacket",
     "IInteractEntityC2SPacket",
     "IPlayerMoveC2SPacket",
     "IRaycastContext",
-    "GuiThemeMixin",
-    "GuiRendererMixin",
     "ISetCameraEntityS2CPacket",
     "ISpectatorTeleportC2SPacket",
     "MixinBackground",
+    "MixinClientCommonNetworkHandler",
     "MixinClientPlayerEntity",
     "MixinClientPlayerInteractionManager",
-    "MixinClientPlayNetworkHandler",
     "MixinEntity",
     "MixinExplosion",
     "MixinHeldItemRenderer",
@@ -27,5 +25,8 @@
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "mixins": [
+    "MixinClientConnection"
+  ]
 }
