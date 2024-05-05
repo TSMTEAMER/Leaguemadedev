@@ -8,6 +8,8 @@
     "IEntityS2CPacket",
     "IEntitySetHeadYawS2CPacket",
     "IEntityStatusS2CPacket",
+    "GuiThemeMixin",
+    "GuiRendererMixin",
     "IInteractEntityC2SPacket",
     "IPlayerMoveC2SPacket",
     "IRaycastContext",
